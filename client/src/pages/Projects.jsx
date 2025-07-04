@@ -4,13 +4,15 @@ import Navbar from '../components/Navbar'
 import axios from 'axios'
 import "../App.css"
 
+// import BASE_URL from '../utils/api'
+
 
 
 const Projects = () => {
   const [projects,setProjects] = useState([])
 
   useEffect(()=>{
-    axios.get("http://localhost:3007/api/projects")
+    axios.get("https://portfolio-c40n.onrender.com/api/projects")
      .then(res=>setProjects(res.data))
      .catch(err=>console.error("failed to fetch projects",err))
   })

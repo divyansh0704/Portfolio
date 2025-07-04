@@ -1,6 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import { useState ,useRef} from 'react'
+// import BASE_URL from '../utils/api'
 
 import Navbar from '../components/Navbar'
 
@@ -49,7 +50,7 @@ const AddProject = () => {
       formData.append('image', file);
     }
     try {
-      await axios.post("http://localhost:3007/api/projects/add", formData,{
+      await axios.post("https://portfolio-c40n.onrender.com/projects/add", formData,{
         headers: { 'Content-Type': 'multipart/form-data' }
       });
       setStatus(" ✅ Project added successfullt!")

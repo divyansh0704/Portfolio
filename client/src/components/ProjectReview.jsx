@@ -1,11 +1,12 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
+// import BASE_URL from '../utils/api'
 
 const ProjectReview = () => {
   const [projects, setProjects] = useState([]);
   useEffect(() => {
-    axios.get('http://localhost:3007/api/projects')
+    axios.get("https://portfolio-c40n.onrender.com/api/projects")
       .then(res => {
         setProjects(res.data.slice(0, 3));
       })
@@ -31,9 +32,7 @@ const ProjectReview = () => {
                 alt="No image"
               />
             )}
-            {/* {project.image_url && (
-              <img src={`http://localhost:3007${project.image_url}`} alt={project.title} style={{ width: '100%', borderRadius: '10px' }} />
-            )} */}
+            
             <div className="project-content">
               <h3>{project.title}</h3>
               <p>{project.description}</p>

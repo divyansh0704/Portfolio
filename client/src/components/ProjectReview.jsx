@@ -23,7 +23,7 @@ const ProjectReview = () => {
           <div className='project-card' key={project.id}>
             {project.image_url ? (
               <img
-                src={`http://localhost:3007${project.image_url}`}
+                src={`https://portfolio-c40n.onrender.com${project.image_url}`}
                 alt={project.title}
               />
             ) : (

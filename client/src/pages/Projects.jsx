@@ -25,7 +25,7 @@ const Projects = () => {
           {projects.map((project)=>(
             <div className='project-card'key={project.id}>
               {project.image_url && (
-              <img src={`http://localhost:3007${project.image_url}`} alt={project.title} style={{ width: '100%', borderRadius: '10px' }} />
+              <img src={`https://portfolio-c40n.onrender.com${project.image_url}`} alt={project.title} style={{ width: '100%', borderRadius: '10px' }} />
             )}
               <h3>{project.title}</h3>
               <p>{project.description}</p>

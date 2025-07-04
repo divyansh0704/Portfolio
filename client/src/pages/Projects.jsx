@@ -15,7 +15,7 @@ const Projects = () => {
     axios.get("https://portfolio-c40n.onrender.com/api/projects")
      .then(res=>setProjects(res.data))
      .catch(err=>console.error("failed to fetch projects",err))
-  })
+  },[])
   return (
     <>
       <Navbar/>

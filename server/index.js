@@ -1,26 +1,15 @@
 const express = require("express");
 const cors = require("cors");
-require('dotenv').config();
 const sequelize = require("./config/db");
+require("dotenv").config()
 const Project = require("./models/projects")
 const projectRoutes = require("./routes/projectRoutes");
-const allowedOrigins = [
-  "https://portfolio-git-master-divyanshs-projects-e0500169.vercel.app",
-  "http://localhost:5173"
-];
 
 
-
-
-
-const PORT = process.env.PORT || 3007;
+const PORT = process.env.PORT || 3007 ;
 const app = express();
 app.use(express.json());
-// app.use(cors());
-app.use(cors({
-  origin: allowedOrigins,
-  credentials: true
-}));
+app.use(cors());
 app.use('/uploads',express.static('uploads'))
 
 

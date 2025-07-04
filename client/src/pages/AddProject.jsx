@@ -50,7 +50,7 @@ const AddProject = () => {
       formData.append('image', file);
     }
     try {
-      await axios.post("https://portfolio-c40n.onrender.com/projects/add", formData,{
+      await axios.post("https://portfolio-c40n.onrender.com/api/projects/add", formData,{
         headers: { 'Content-Type': 'multipart/form-data' }
       });
       setStatus(" ✅ Project added successfullt!")

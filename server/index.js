@@ -5,7 +5,7 @@ const Project = require("./models/projects")
 const projectRoutes = require("./routes/projectRoutes");
 
 
-const PORT = 3007;
+const PORT = process.env.PORT || 3007;
 const app = express();
 app.use(express.json());
 app.use(cors());

@@ -14,7 +14,7 @@ app.use('/uploads',express.static('uploads'))
 
 
 sequelize.authenticate()
- .then(()=>console.log("database is connected successfully"))
+ .then(()=>console.log("Connected to neon PostgreSQL"))
  .catch((err)=>console.error("database not connected",err))
 
 sequelize.sync()

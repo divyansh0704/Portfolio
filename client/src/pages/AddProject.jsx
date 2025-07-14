@@ -49,7 +49,7 @@ const AddProject = () => {
       formData.append('image', file);
     }
     try {
-      await axios.post("http://localhost:3007/api/projects/add", formData,{
+      await axios.post("https://portfolio-gdlr.onrender.com/api/projects/add", formData,{
         headers: { 'Content-Type': 'multipart/form-data' }
       });
       setStatus(" ✅ Project added successfullt!")

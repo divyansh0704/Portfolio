@@ -5,7 +5,7 @@ import axios from 'axios'
 const ProjectReview = () => {
   const [projects, setProjects] = useState([]);
   useEffect(() => {
-    axios.get('http://localhost:3007/api/projects')
+    axios.get('https://portfolio-gdlr.onrender.com/api/projects')
       .then(res => {
         setProjects(res.data.slice(0, 3));
       })
@@ -22,7 +22,7 @@ const ProjectReview = () => {
           <div className='project-card' key={project.id}>
             {project.image_url ? (
               <img
-                src={`http://localhost:3007${project.image_url}`}
+                src={`https://portfolio-gdlr.onrender.com${project.image_url}`}
                 alt={project.title}
               />
             ) : (

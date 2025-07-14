@@ -10,7 +10,7 @@ const Projects = () => {
   const [projects, setProjects] = useState([])
 
   useEffect(() => {
-    axios.get("http://localhost:3007/api/projects")
+    axios.get("https://portfolio-gdlr.onrender.com/api/projects")
       .then(res => setProjects(res.data))
       .catch(err => console.error("failed to fetch projects", err))
   })
@@ -23,7 +23,7 @@ const Projects = () => {
           {projects.map((project) => (
             <div className='project-card' key={project.id}>
               {project.image_url && (
-                <img src={`http://localhost:3007${project.image_url}`} alt={project.title} style={{ width: '100%', borderRadius: '10px' }} />
+                <img src={`https://portfolio-gdlr.onrender.com${project.image_url}`} alt={project.title} style={{ width: '100%', borderRadius: '10px' }} />
               )}
               <h3>{project.title}</h3>
               <p>{project.description}</p>

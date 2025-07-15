@@ -8,17 +8,27 @@ import "../App.css"
 
 const Projects = () => {
   const [projects, setProjects] = useState([])
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     axios.get("https://portfolio-gdlr.onrender.com/api/projects")
-      .then(res => setProjects(res.data))
-      .catch(err => console.error("failed to fetch projects", err))
+      .then(res => {
+        setProjects(res.data);
+        setLoading(false);
+      })
+      .catch(err => {
+        console.error("failed to fetch projects", err);
+        setLoading(false);
+
+      })
   })
   return (
     <>
       <Navbar />
       <section className="project-preview">
         <h2>All Projects</h2>
+        {loading && <p>Loading projects...</p>}
+        {projects.length === 0 && !loading && <p>No projects found.</p>}
         <div className="project-grid">
           {projects.map((project) => (
             <div className='project-card' key={project.id}>

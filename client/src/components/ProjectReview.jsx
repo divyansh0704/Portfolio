@@ -4,19 +4,26 @@ import axios from 'axios'
 
 const ProjectReview = () => {
   const [projects, setProjects] = useState([]);
+  const [loading,setLoading] = useState(true)
   useEffect(() => {
     axios.get('https://portfolio-gdlr.onrender.com/api/projects')
       .then(res => {
         setProjects(res.data.slice(0, 3));
+        setLoading(false);
+
+
       })
       .catch(err => {
-        console.error("error fetching projects", err.message)
+        console.error("error fetching projects", err.message);
+        setLoading(false);
       });
 
   }, [])
   return (
     <section className="project-preview">
       <h2>Latest Projects</h2>
+      {loading && <p>Loading projects...</p>}
+      {projects.length === 0 && !loading && <p>No projects found.</p>}
       <div className="project-grid">
         {projects.map((project) => (
           <div className='project-card' key={project.id}>

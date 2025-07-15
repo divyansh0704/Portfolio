@@ -170,6 +170,44 @@ input, textarea {
 }
 
 
+
+
+
+
+/* Add this outside the media query */
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: white;
+  z-index: 1000;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: #00bcd4;
+}
+
+
 /* Mobile responsiveness */
 @media screen and (max-width: 600px) {
   .hero h1 {
@@ -183,5 +221,34 @@ input, textarea {
   .about h2 {
     font-size: 1.4rem;
   }
+
+
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 55px;
+    right: 10px;
+    background-color: #333;
+    flex-direction: column;
+    width: 150px;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 10px 0;
+    width: 100%;
+  }
 }
+
 

@@ -177,7 +177,7 @@ input, textarea {
 /* Add this outside the media query */
 .navbar {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   background-color: #333;
   color: white;
@@ -223,11 +223,17 @@ input, textarea {
   }
 
 
-
+nav a {
+  
+  margin: 8px 15px;
+ 
+}
   .menu-toggle {
     display: block;
   }
-
+  .navbar{
+    justify-content: flex-end;
+  }
   .nav-links {
     display: none;
     position: absolute;

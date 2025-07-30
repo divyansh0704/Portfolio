@@ -40,7 +40,10 @@ const Projects = () => {
               <p><strong>Tech:</strong>{project.tech_stack}</p>
               <div className="project-buttons">
                 <a href={project.github_link} target='_blank' rel='noreferrel' className="btn btn-github">GitHub</a>
-                <a href={project.live_link} target='_blank' rel='noreferrel' className="btn btn-live"> Live_Demo</a>
+                {project.github_link && (
+                  <a href={project.live_link} target='_blank' rel='noreferrel' className="btn btn-live"> Live_Demo</a>
+                )}
+                
               </div>
 
             </div>

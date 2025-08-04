@@ -43,7 +43,7 @@ const ProjectReview = () => {
             )} */}
             <div className="project-content">
               <h3>{project.title}</h3>
-              <p>{project.description}</p>
+              <p className='P' >{project.description}</p>
               <p><strong>Tech:</strong>{project.tech_stack}</p>
               <div className="project-buttons">
                 <a href={project.github_link} target='_blank' rel='noreferrer' className="btn btn-github">GitHub</a>

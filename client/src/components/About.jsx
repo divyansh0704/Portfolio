@@ -1,11 +1,18 @@
 import React from 'react'
+import { motion } from 'framer-motion'
+import "./about.css"
 
 const About = () => {
   return (
-    <section className='about'>
-      <h2>About Me</h2>
-      <p>I’m a BTech CSE student at Chitkara University. I create full-stack MERN projects, design UI, and help students with college projects.</p>
-    </section>
+    <motion.section className='about'
+    initial={{opacity:0,y:50}}
+    whileInView={{opacity:1,y:0}}
+    viewport={{once:true}}
+    transition={{duration:0.6}}
+    >
+      <h2>I'm a Software Engineer.|</h2>
+      <h6>I’m a Software Engineer and BTech CSE student at Chitkara University, building full-stack MERN applications and strengthening my problem-solving skills through consistent DSA practice.</h6>
+    </motion.section>
   )
 }
 

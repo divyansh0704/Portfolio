@@ -37,7 +37,7 @@ const Projects = () => {
               )}
               <h3>{project.title}</h3>
               <p>{project.description}</p>
-              <p><strong>Tech:</strong>{project.tech_stack}</p>
+              {/* <p><strong>Tech:</strong>{project.tech_stack}</p> */}
               <div className="project-buttons">
                 <a href={project.github_link} target='_blank' rel='noreferrel' className="btn btn-github">GitHub</a>
                 {project.github_link && (

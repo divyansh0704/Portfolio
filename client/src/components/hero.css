@@ -99,5 +99,7 @@
         justify-content: start;
         height: 40vh;
     }
-    
+    .hero-right .who h2{
+        font-size: 38px;
+    }
 }

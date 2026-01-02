@@ -242,16 +242,8 @@ textarea {
 
 /* Mobile responsiveness */
 @media screen and (max-width: 600px) {
-  .hero {
-    height: 30vh;
-  }
-
-  .hero h1 {
-    font-size: 1.8rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
+  .k{
+    display: none;
   }
 
   .about h2 {
@@ -259,22 +251,22 @@ textarea {
   }
 
 
-  nav a {
+  /* nav a {
 
     margin: 8px 15px;
 
-  }
+  } */
 
-  .menu-toggle {
+  /* .menu-toggle {
     display: block;
-  }
+  } */
 
-  .navbar {
+  /* .navbar {
     justify-content: flex-end;
     padding: 8px 20px;
-  }
+  } */
 
-  .nav-links {
+  /* .nav-links {
     display: none;
     position: absolute;
     top: 55px;
@@ -285,9 +277,9 @@ textarea {
     padding: 10px;
     border-radius: 8px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
-  }
+  } */
 
-  .nav-links.open {
+  /* .nav-links.open {
     display: flex;
     gap: 4px;
   }
@@ -295,5 +287,5 @@ textarea {
   .nav-links a {
     padding: 10px 0;
     width: 100%;
-  }
+  } */
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import { useState ,useRef} from 'react'
-
+import { motion } from 'framer-motion'
 import Navbar from '../components/Navbar'
 
 const ADMIN_PASSWORD = import.meta.env.VITE_ADMIN_PASS
@@ -76,8 +76,17 @@ const AddProject = () => {
   return (
     <>
       <Navbar />
-      <section className='about'>
-        <h2>Add New Project (Admin Panel) </h2>
+      <motion.section className='about'
+       initial={{opicity:0,y:40}}
+      animate={{opacity:1,y:0}}
+      transition={{duration:0.6}}
+      >
+        <motion.h2
+         initial={{opicity:0,y:40}}
+      animate={{opacity:1,y:0}}
+      transition={{duration:0.6}}
+        
+        >Add New Project (Admin Panel) </motion.h2>
         {!authenticated ? (
           <form onSubmit={handlePasswordSubmit} style={{ maxWidth: '400px' }}>
             <input
@@ -108,7 +117,7 @@ const AddProject = () => {
 
 
 
-      </section >
+      </motion.section >
     </>
   )
 }

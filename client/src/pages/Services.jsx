@@ -1,15 +1,30 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
+import "./services.css"
 import "../App.css"
+import { motion } from 'framer-motion'
+
 
 const Services = () => {
   return (
     <>
       <Navbar />
-      <section className='about'>
-        <h2>📚Custom College Projects (Services)</h2>
+      <motion.section className='about'
+      initial={{opicity:0,y:40}}
+      animate={{opacity:1,y:0}}
+      transition={{duration:0.6}}
+      >
+        <motion.h2
+        initial={{opicity:0,y:40}}
+      animate={{opacity:1,y:0}}
+      transition={{duration:0.7}}
+        >📚Custom College Projects (Services)</motion.h2>
         <p> Need a mini or major project for your college? I create custom projects using the MERN stack (MongoDB, Express, React, Node.js), and also with MySQL, Admin Panels, login systems, etc.</p>
-        <h3>💡Mini Project Ideas</h3>
+        <motion.h3
+        initial={{opicity:0,y:40}}
+      animate={{opacity:1,y:0}}
+      transition={{duration:0.7}}
+        >💡Mini Project Ideas</motion.h3>
         <ul>
           <li>🛒 E-commerce Product Showcase</li>
           <li>📆 Task Manager with Deadline Alerts</li>
@@ -18,7 +33,11 @@ const Services = () => {
           <li>🎓 Student Attendance Dashboard</li>
           <li>📊 Admin Panel for College Records</li>
         </ul>
-        <h3>📞Contact to order</h3>
+        <motion.h3
+        initial={{opicity:0,y:40}}
+      animate={{opacity:1,y:0}}
+      transition={{duration:0.7}}
+        >📞Contact to order</motion.h3>
          <div style={{ marginTop: '15px' }}>
           <a
             href="https://wa.me/919306621131"
@@ -54,7 +73,7 @@ const Services = () => {
           </a>
         </div>
 
-      </section>
+      </motion.section>
     </>
   )
 }

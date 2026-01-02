@@ -1,13 +1,23 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 import "../App.css"
+import { motion } from 'framer-motion'
 
 const Contact = () => {
   return (
     <>
       <Navbar />
-      <section className="about">
-        <h2>📬 Contact Me</h2>
+      <motion.section className="about"
+       initial={{opicity:0,y:40}}
+      animate={{opacity:1,y:0}}
+      transition={{duration:0.6}}
+      >
+        <motion.h2
+         initial={{opicity:0,y:40}}
+      animate={{opacity:1,y:0}}
+      transition={{duration:0.7}}
+        
+        >📬 Contact Me</motion.h2>
         <p>
           I'd love to connect! Reach out to me for freelance projects, collaborations, or any tech queries.
         </p>
@@ -27,7 +37,7 @@ const Contact = () => {
             Coming Soon...
           </button>
         </form>
-      </section>
+      </motion.section>
     </>
   )
 }

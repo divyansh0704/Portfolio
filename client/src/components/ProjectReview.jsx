@@ -1,11 +1,12 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
-import {motion} from "framer-motion"
+import { motion } from "framer-motion"
+import "./shimmer.css"
 
 const ProjectReview = () => {
   const [projects, setProjects] = useState([]);
-  const [loading,setLoading] = useState(true)
+  const [loading, setLoading] = useState(true)
   useEffect(() => {
     axios.get('https://portfolio-gdlr.onrender.com/api/projects')
       .then(res => {
@@ -22,22 +23,37 @@ const ProjectReview = () => {
   }, [])
   return (
     <motion.section className="project-preview"
-    initial={{opacity:0,y:50}}
-    whileInView={{opacity:1,y:0}}
-    viewport={{once:true}}
-    transition={{duration:0.6}}
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+      // whileHover={{ scale: 1.05, y: -6 }}
+
+      
+
+
     >
+
       <motion.h2
-      initial={{opacity:0,y:50}}
-    whileInView={{opacity:1,y:0}}
-    viewport={{once:true}}
-    transition={{duration:0.8}}
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
       >Latest Projects</motion.h2>
-      {loading && <p>Loading projects...</p>}
-      {projects.length === 0 && !loading && <p>No projects found.</p>}
+      {loading && <div className="project-grid">
+          {[1, 2, 3].map((item) => (
+            <div className="shimmer-card" key={item}>
+              <div className="shimmer-content"></div>
+            </div>
+          ))}
+        </div>}
+      {projects.length === 0 && !loading && <p style={{color:'white'}}>No projects found.</p>}
       <div className="project-grid">
         {projects.map((project) => (
-          <div className='project-card' key={project.id}>
+          <motion.div className='project-card' key={project.id}
+          whileHover={{ scale: 1.05, y: -6 }}
+      transition={{ type: "spring", stiffness: 200 }}
+          >
             {project.image_url ? (
               <img
                 src={`https://portfolio-gdlr.onrender.com${project.image_url}`}
@@ -64,7 +80,7 @@ const ProjectReview = () => {
 
 
 
-          </div>
+          </motion.div>
 
         ))}
       </div>

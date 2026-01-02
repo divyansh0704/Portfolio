@@ -1,0 +1,30 @@
+
+@keyframes shimmer {
+  0% {
+    background-position: -450px 0;
+  }
+  100% {
+    background-position: 450px 0;
+  }
+}
+
+.shimmer-card {
+  height: 420px;
+  border-radius: 16px;
+  background: #2a1b3d;
+  background-image: linear-gradient(
+    to right,
+    #2a1b3d 0%,
+    #3a2a4d 20%,
+    #2a1b3d 40%,
+    #2a1b3d 100%
+  );
+  background-repeat: no-repeat;
+  background-size: 800px 100%;
+  animation: shimmer 1.5s infinite linear;
+}
+
+/* Optional inner spacing */
+.shimmer-content {
+  padding: 16px;
+}

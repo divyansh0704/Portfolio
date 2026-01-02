@@ -4,10 +4,20 @@
     flex-direction: column;
     justify-content: start;
     gap: 24px;
+    padding: 6% 7%;
+}
+.about h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.about p {
+  font-size: 1rem;
+  line-height: 1.6;
 }
 .about h2{
     color: white;
-    font-size: 60px;
+    /* font-size: 60px; */
     font-family: 'Preahvihear',sans-serif;
 
 }
@@ -16,5 +26,15 @@
     font-family: 'Preahvihear',sans-serif;
     font-size: 20px;
     font-weight: 50;
+    width: 68%;
 
+}
+
+.glow {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  right: 300px;
+  background: radial-gradient(circle, #7c3aed55, transparent 60%);
+  filter: blur(80px);
 }

@@ -13,3 +13,16 @@
     flex-direction: column;
     font-family:'Preahvihear',sans-serif ;
 }
+.social-icons{
+    margin-top: 20px;
+    display: flex;
+    gap: 18px;
+}
+.social-icons a{
+    color: white;
+    cursor: pointer;
+    
+}
+.social a:hover {
+  filter: drop-shadow(0 0 10px currentColor);
+}

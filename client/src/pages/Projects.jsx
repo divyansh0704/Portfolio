@@ -55,7 +55,7 @@ const Projects = () => {
               transition={{ type: "spring", stiffness: 200 }}
             >
               {project.image_url && (
-                <img src={`https://portfolio-gdlr.onrender.com${project.image_url}`} alt={project.title} style={{ width: '100%', borderRadius: '10px' }} />
+                <img src={project.image_url} alt={project.title} style={{ width: '100%', borderRadius: '10px' }} />
               )}
               <h3>{project.title}</h3>
               <p>{project.description}</p>

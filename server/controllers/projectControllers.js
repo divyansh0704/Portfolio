@@ -3,7 +3,7 @@ const Project = require("../models/projects");
 exports.createProject = async(req,res)=>{
     try{
         const {title,description,tech_stack,github_link,live_link}=req.body;
-        const image_url = req.file ? `/uploads/${req.file.filename}`:'';
+        const image_url = req.file.path;
         const project = await Project.create({
             title,
             description,

@@ -56,7 +56,7 @@ const ProjectReview = () => {
           >
             {project.image_url ? (
               <img
-                src={`https://portfolio-gdlr.onrender.com${project.image_url}`}
+                src={project.image_url}
                 alt={project.title}
               />
             ) : (

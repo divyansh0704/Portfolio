@@ -13,7 +13,7 @@ const Projects = () => {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    axios.get("https://portfolio-gdlr.onrender.com/api/projects")
+    axios.get("https://portfolio-g8nf.onrender.com/api/projects")
       .then(res => {
         setProjects(res.data);
         setLoading(false);

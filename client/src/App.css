@@ -44,7 +44,7 @@ textarea {
 /* Project Preview */
 .project-preview {
   /* padding: 40px 20px; */
-  max-width: 1200px;
+  max-width: 90vw;
   /* margin: auto; */
   padding: 6% 7%;
 
@@ -65,14 +65,13 @@ textarea {
 
 .project-card {
   border: 1px solid #ddd;
-  /* border-radius: 10px; */
+
   padding: 20px;
-  /* background: #fff; */
+
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
   transition: transform 0.2s;
-  /* min-height: 450px; */
-  /* max-width: 320px; */
-  max-height: 540px;
+
+  max-height: 640px;
 
   background: var(--glass-bg);
   border: 1px solid var(--glass-border);
@@ -85,7 +84,7 @@ textarea {
   width: 100%;
   height: 180px;
   object-fit: cover;
-  border: 2px solid white;
+  border: 1px solid white;
   border-radius: 8px;
   margin-bottom: 15px;
   display: block;
@@ -105,10 +104,10 @@ textarea {
   font-family: 'Preahvihear', sans-serif;
 }
 
-.project-card p {
+.project-card .desc {
   background: var(--glass-bg);
   border: 1px solid var(--glass-border);
-  backdrop-filter: blur(14px);
+  /* backdrop-filter: blur(14px); */
   border-radius: 4px;
   /* padding: 20px; */
 
@@ -121,7 +120,7 @@ textarea {
 
 
   padding: 8px;
-  max-height: 13em;
+  height: 10em;
   overflow-y: auto;
   padding-right: 5px;
   word-wrap: break-word;
@@ -129,8 +128,31 @@ textarea {
   line-height: 1.5em;
   /* background-color: #fff; */
 
-  scrollbar-width: thin;
+  scrollbar-width: none;
   scrollbar-color: #ccc transparent;
+}
+.tech{
+ 
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  /* width: ; */
+  height: 6em;
+}
+.techCap{
+  /* border: 2px solid rgb(51, 255, 0);
+  width: 20%; */
+      /* border: 2px solid rgb(51, 255, 0); */
+       border: 1px solid rgb(53 24 71);
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+    padding: 6px;
+    height: 26px;
+    border-radius: 14px;
+    flex-wrap: wrap;
 }
 
 .project-card p::-webkit-scrollbar {

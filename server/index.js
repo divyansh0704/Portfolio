@@ -28,4 +28,5 @@ sequelize.sync()
 app.use("/api/projects",projectRoutes);
 
 
+
 app.listen(PORT,()=>console.log(`server is running on ${PORT}`))

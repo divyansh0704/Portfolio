@@ -1,7 +1,7 @@
 import React from 'react'
 import "./bottom.css"
 import { FaInstagram, FaGithub, FaLinkedin, FaCode } from "react-icons/fa";
-import SocialIcons from './socialIcons';
+import SocialIcons from './SocialIcons';
 
 import { motion } from 'framer-motion'
 const Bottom = () => {

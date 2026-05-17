@@ -2,7 +2,7 @@ import React from 'react'
 import { motion } from "framer-motion"
 import image1 from "../assets/image1.svg"
 import "./hero.css"
-import SocialIcons from './socialIcons'
+import SocialIcons from './SocialIcons'
 
 const Hero = () => {
   return (

@@ -2,6 +2,7 @@ import React from 'react'
 import { motion } from "framer-motion"
 import image1 from "../assets/image1.svg"
 import "./hero.css"
+import SocialIcons from './socialIcons'
 
 const Hero = () => {
   return (
@@ -11,6 +12,9 @@ const Hero = () => {
     // animate={{opacity:1,y:0}}
     // transition={{duration:0.8}}
     >
+      <div className="box-icon">
+        <SocialIcons/>
+      </div>
       <div className="hero-left">
         <motion.img src={image1}  animate={{ y: [-3, -7, -3] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }} height={240} alt="avatr" />

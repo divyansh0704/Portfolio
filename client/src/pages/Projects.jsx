@@ -16,7 +16,7 @@ const Projects = () => {
 
   useEffect(() => {
     
-    axios.get("https://portfolio-g8nf.onrender.com/api/projects")
+    axios.get("https://portfolio-qlwv.onrender.com/api/projects")
       .then(res => {
         setProjects(res.data);
         setLoading(false);
